@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
   */
 
   // Server Componetn 일 경우
-  const resp = await fetch('http://localhost:9999/topics', { revalidation: 0 });
+  const resp = await fetch('http://localhost:9999/topics');
   // next: { revalidation: 0 } : 캐시를 0초 동안 생성함
   // 생성 된 캐시 지우기 : Revaildation 참고
   const topics = await resp.json();
